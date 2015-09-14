@@ -27,7 +27,8 @@
     "dependency-check": "^2.5.0",
     "from2-string": "^1.1.0",
     "istanbul": "^0.3.19",
-    "standard": "^5.2.2"
+    "standard": "^5.2.2",
+    "tape": "^4.2.0"
   },
   "files": [
     "index.js",
