@@ -29,6 +29,7 @@ http.createServer((req, res) => {
 ### lr(opts)
 Create a duplex inject stream. Expects a `<body>` tag to be present. The
 following opts are available:
+- protocol: defaults to `http`
 - __port__: livereload port, defaults to `35729`
 - __host__: livereload host, defaults to `localhost`
 

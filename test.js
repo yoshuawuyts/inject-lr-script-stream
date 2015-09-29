@@ -20,11 +20,12 @@ test('should inject a livereload script', function (t) {
 })
 
 test('should have custom opts', function (t) {
-  t.plan(2)
+  t.plan(3)
   fromString('<html><body></body></html>')
-    .pipe(lr({ port: 1337, host: 'ipfs.io' }))
+    .pipe(lr({ port: 1337, host: 'ipfs.io', protocol: 'https' }))
     .pipe(concat(function (buf) {
       const str = buf.toString()
+      t.ok(/https/.test(str), 'protocol configured')
       t.ok(/ipfs/.test(str), 'host configured')
       t.ok(/1337/.test(str), 'port configured')
     }))
